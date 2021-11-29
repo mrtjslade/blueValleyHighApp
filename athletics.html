@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Blue Valley High</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  
+  <body>
+    <!-- Sidebar menu -->
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="index.html">Loading Screen</a>
+      <a href="liveFeed.html">Live Feed</a>
+      <a href="staff.html">Staff</a>
+      <a href="athletics.html">Athletics</a>
+      <a href="dining.html">Dining</a>
+      <a href="documents.html">Documents</a>
+      <a href="aboutUs.html">About Us</a>
+    </div>
+    
+    <span onclick="openNav()"><img src="images/hamburger-cropped.png" width="25px"><img></span>
+
+    <div class="background">
+     <div id="adobe-dc-view"></div>
+      <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+      <script type="text/javascript">
+        document.addEventListener("adobe_dc_view_sdk.ready", function(){ 
+          var adobeDCView = new AdobeDC.View({clientId: "2ea17dc0fe43426bb9179d2480c788ff", divId: "adobe-dc-view"});
+          adobeDCView.previewFile({
+            content:{location: {url: "https://documentcloud.adobe.com/view-sdk-demo/PDFs/athleticEvents.html"}},
+            metaData:{fileName: "athleticEvents.pdf"}
+          }, {});
+        });
+      </script>
+
+
+    </div>
+
+
+    <script src="script.js"></script>
+  </body>
+</html>
